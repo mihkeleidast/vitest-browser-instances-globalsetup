@@ -15,9 +15,20 @@ export default defineConfig({
       headless: true,
       provider: playwright(),
       instances: [
-        { browser: 'chromium', name: 'instance-1' },
-        { browser: 'chromium', name: 'instance-2' },
+        { browser: 'chromium' },
       ],
     },
+    projects: [
+      {
+        test: {
+          name: 'instance-1'
+        }
+      },
+      {
+        test: {
+          name: 'instance-2'
+        }
+      }
+    ]
   },
 })
